@@ -4,6 +4,18 @@
 docker rmi -f $(docker images --filter dangling=true -qa)
 ```
 
+### docker install by yum
+```
+[root@localhost ~]# yum install -y yum-utils
+[root@localhost ~]# yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+[root@localhost ~]# yum install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin 
+[root@localhost ~]# mkdir /etc/docker
+[root@localhost ~]# echo "{"data-root": "/home/docker-root"}" >> /etc/docker/daemon.json
+[root@localhost ~]# systemctl enable docker
+[root@localhost ~]# systemctl start docker
+[root@localhost ~]# docker info
+```
+
 
 # centos 7
 ### 修改history 格式
@@ -27,4 +39,5 @@ export HISTTIMEFORMAT" >> /etc/profile
 [root@localhost ~]# nmtui
 [root@localhost ~]# ip link [dev name] set up
 [root@localhost ~]# chkconfig NetworkManaget on
+[root@localhost ~]# wpa_supplicant -B -i wlp3s0 -c <(wpa_passphrase "[SSID]" "[PIN]")
 ```
