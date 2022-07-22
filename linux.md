@@ -21,7 +21,7 @@ export HISTTIMEFORMAT" >> /etc/profile
 [root@localhost ~]# source /etc/profile
 [root@localhost ~]# history
 ```
-### wifi
+### contos7 connect wifi
 ```
 [root@localhost ~]# nmcli dev show
 [root@localhost ~]# nmtui
