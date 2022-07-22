@@ -21,3 +21,10 @@ export HISTTIMEFORMAT" >> /etc/profile
 [root@localhost ~]# source /etc/profile
 [root@localhost ~]# history
 ```
+### wifi
+```
+[root@localhost ~]# nmcli dev show
+[root@localhost ~]# nmtui
+[root@localhost ~]# ip link [dev name] set up
+[root@localhost ~]# chkconfig NetworkManaget on
+```
